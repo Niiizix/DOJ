@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Management - U.S. Department of Justice</title>
+    <link rel="stylesheet" href="intra-styles.css">
+</head>
+<body>
+    <!-- Bannière d'avertissement GTARP -->
+    <div class="gtarp-warning">
+        INTRANET: Accès strictement réservé aux personnes autorisées. Tout accès non autorisé fera l'objet de poursuites judiciaires.
+    </div>
+
+    <!-- Header -->
+    <header class="header intranet-header">
+        <div class="header-content">
+            <img src="../imgs/logo.svg" alt="DOJ Logo" class="header-logo">
+            <div class="user-info">
+                <div class="user-name">Agent Smith</div>
+                <div class="user-badge">Federal Agent</div>
+            </div>
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav intranet-nav">
+        <div class="nav-content">
+            <ul>
+                <li><a href="intra-dashboard.html">Dashboard</a></li>
+                <li><a href="intra-affaires.html" class="active">Case Management</a></li>
+                <li><a href="intra-database.html">Database</a></li>
+                <li><a href="intra-ressources.html">Resources</a></li>
+                <li><a href="intra-admin.html">Administration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="cases-main">
+        <!-- Header de page -->
+        <div class="page-header">
+            <h1>Case Management</h1>
+            <p>Monitor and manage all active federal cases. Access case files, update progress, and coordinate with team members.</p>
+        </div>
+
+        <!-- Liste des affaires -->
+        <div class="cases-container">
+            <!-- Affaire 1 -->
+            <div class="case-item">
+                <div class="case-header">
+                    <div class="case-info">
+                        <h3 class="case-title">Operation Silent Thunder</h3>
+                        <div class="case-date">Opened: December 10, 2024</div>
+                    </div>
+                    <div class="case-status new">New</div>
+                </div>
+                <div class="case-summary">
+                    Multi-state drug trafficking investigation targeting organized crime syndicate operating across the eastern seaboard. Initial surveillance has identified key players and distribution networks. Coordinating with DEA and local law enforcement agencies for synchronized raids scheduled within 72 hours.
+                </div>
+                <div class="case-meta">
+                    <span class="case-id">Case ID: DOJ-2024-1207</span>
+                    <span class="assigned-agent">Lead Agent: Detective Williams</span>
+                </div>
+            </div>
+
+            <!-- Affaire 2 -->
+            <div class="case-item">
+                <div class="case-header">
+                    <div class="case-info">
+                        <h3 class="case-title">Cybersecurity Breach Investigation</h3>
+                        <div class="case-date">Opened: November 28, 2024</div>
+                    </div>
+                    <div class="case-status in-progress">In Progress</div>
+                </div>
+                <div class="case-summary">
+                    Investigation into sophisticated cyber attack targeting federal infrastructure databases. Digital forensics team has identified attack vectors and is tracing source IPs. Evidence suggests state-sponsored activities. Coordinating with FBI Cyber Division and NSA counterparts for comprehensive response strategy.
+                </div>
+                <div class="case-meta">
+                    <span class="case-id">Case ID: DOJ-2024-1195</span>
+                    <span class="assigned-agent">Lead Agent: Agent Rodriguez</span>
+                </div>
+            </div>
+
+            <!-- Affaire 3 -->
+            <div class="case-item">
+                <div class="case-header">
+                    <div class="case-info">
+                        <h3 class="case-title">Financial Fraud Task Force Alpha</h3>
+                        <div class="case-date">Opened: November 15, 2024</div>
+                    </div>
+                    <div class="case-status in-progress">In Progress</div>
+                </div>
+                <div class="case-summary">
+                    Complex white-collar crime investigation involving cryptocurrency money laundering scheme worth approximately $45 million. Suspects include high-profile business executives and offshore shell companies. Currently in evidence gathering phase with multiple search warrants executed. Preparing grand jury testimony.
+                </div>
+                <div class="case-meta">
+                    <span class="case-id">Case ID: DOJ-2024-1178</span>
+                    <span class="assigned-agent">Lead Agent: Agent Chen</span>
+                </div>
+            </div>
+
+            <!-- Affaire 4 -->
+            <div class="case-item">
+                <div class="case-header">
+                    <div class="case-info">
+                        <h3 class="case-title">Interstate Human Trafficking Ring</h3>
+                        <div class="case-date">Opened: October 22, 2024</div>
+                    </div>
+                    <div class="case-status finished">Finished</div>
+                </div>
+                <div class="case-summary">
+                    Successfully dismantled human trafficking operation spanning five states. Operation resulted in 23 arrests, rescue of 47 victims, and seizure of assets totaling $2.3 million. Case prosecution phase complete with all defendants receiving federal sentences. Final reports submitted and case officially closed.
+                </div>
+                <div class="case-meta">
+                    <span class="case-id">Case ID: DOJ-2024-1089</span>
+                    <span class="assigned-agent">Lead Agent: Agent Thompson</span>
+                </div>
+            </div>
+
+            <!-- Affaire 5 -->
+            <div class="case-item">
+                <div class="case-header">
+                    <div class="case-info">
+                        <h3 class="case-title">Federal Witness Protection Breach</h3>
+                        <div class="case-date">Opened: December 18, 2024</div>
+                    </div>
+                    <div class="case-status new">New</div>
+                </div>
+                <div class="case-summary">
+                    Critical security incident involving potential compromise of witness protection program information. Internal investigation launched to identify source of leak and assess extent of exposure. All affected witnesses have been relocated as precautionary measure. Coordinating with U.S. Marshals Service for enhanced security protocols.
+                </div>
+                <div class="case-meta">
+                    <span class="case-id">Case ID: DOJ-2024-1215</span>
+                    <span class="assigned-agent">Lead Agent: Agent Johnson</span>
+                </div>
+            </div>
+
+            <!-- Affaire 6 -->
+            <div class="case-item">
+                <div class="case-header">
+                    <div class="case-info">
+                        <h3 class="case-title">Corporate Espionage Investigation</h3>
+                        <div class="case-date">Opened: November 5, 2024</div>
+                    </div>
+                    <div class="case-status in-progress">In Progress</div>
+                </div>
+                <div class="case-summary">
+                    Investigation into alleged theft of classified defense contractor technologies. Surveillance operations have identified several suspects with connections to foreign intelligence services. Wiretaps authorized and active. Evidence collection ongoing with plans for coordinated arrests pending prosecutor approval.
+                </div>
+                <div class="case-meta">
+                    <span class="case-id">Case ID: DOJ-2024-1163</span>
+                    <span class="assigned-agent">Lead Agent: Agent Davis</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer intranet-footer">
+        <div class="footer-content">
+            <div>
+                <h4>Internal Resources</h4>
+                <ul>
+                    <li><a href="#policies">Internal Policies</a></li>
+                    <li><a href="#training">Training Materials</a></li>
+                    <li><a href="#contacts">Agent Directory</a></li>
+                    <li><a href="#help">Technical Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Case Management</h4>
+                <ul>
+                    <li><a href="#active">Active Cases</a></li>
+                    <li><a href="#archived">Case Archives</a></li>
+                    <li><a href="#templates">Report Templates</a></li>
+                    <li><a href="#workflow">Workflow Guidelines</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Database Access</h4>
+                <ul>
+                    <li><a href="#criminal">Criminal Records</a></li>
+                    <li><a href="#evidence">Evidence Database</a></li>
+                    <li><a href="#forensics">Forensic Reports</a></li>
+                    <li><a href="#intelligence">Intelligence Data</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>System</h4>
+                <ul>
+                    <li><a href="#security">Security Settings</a></li>
+                    <li><a href="#backups">Data Backup</a></li>
+                    <li><a href="#logs">System Logs</a></li>
+                    <li><a href="#maintenance">Maintenance Schedule</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 U.S. Department of Justice Internal System | Classified - Authorized Personnel Only</p>
+        </div>
+    </footer>
+</body>
+</html>

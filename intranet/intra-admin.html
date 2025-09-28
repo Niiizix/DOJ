@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - U.S. Department of Justice</title>
+    <link rel="stylesheet" href="intra-styles.css">
+</head>
+<body>
+    <!-- Bannière d'avertissement GTARP -->
+    <div class="gtarp-warning">
+        INTRANET: Accès strictement réservé aux personnes autorisées. Tout accès non autorisé fera l'objet de poursuites judiciaires.
+    </div>
+
+    <!-- Header -->
+    <header class="header intranet-header">
+        <div class="header-content">
+            <img src="../imgs/logo.svg" alt="DOJ Logo" class="header-logo">
+            <div class="user-info">
+                <div class="user-name">Agent Smith</div>
+                <div class="user-badge">Federal Agent</div>
+            </div>
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav intranet-nav">
+        <div class="nav-content">
+            <ul>
+                <li><a href="intra-dashboard.html">Dashboard</a></li>
+                <li><a href="intra-affaires.html">Case Management</a></li>
+                <li><a href="intra-database.html">Database</a></li>
+                <li><a href="intra-ressources.html">Resources</a></li>
+                <li><a href="intra-admin.html" class="active">Administration</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="admin-main">
+        <!-- Header de page -->
+        <div class="page-header">
+            <h1>System Administration</h1>
+            <p>Manage system settings, user permissions, and operational parameters for the DOJ intranet platform.</p>
+        </div>
+
+        <div class="admin-grid">
+            <!-- System Status Management -->
+            <section class="admin-section">
+                <h2>System Status Management</h2>
+                <p>Control operational status for all system components</p>
+                
+                <div class="status-controls">
+                    <div class="status-control-item">
+                        <div class="control-info">
+                            <span class="control-name">Case Management System</span>
+                            <span class="current-status operational">Currently: Operational</span>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn active">Operational</button>
+                            <button class="control-btn">Maintenance</button>
+                        </div>
+                    </div>
+
+                    <div class="status-control-item">
+                        <div class="control-info">
+                            <span class="control-name">Federal Database Access</span>
+                            <span class="current-status operational">Currently: Operational</span>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn active">Operational</button>
+                            <button class="control-btn">Maintenance</button>
+                        </div>
+                    </div>
+
+                    <div class="status-control-item">
+                        <div class="control-info">
+                            <span class="control-name">Evidence Upload Portal</span>
+                            <span class="current-status maintenance">Currently: Maintenance</span>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn">Operational</button>
+                            <button class="control-btn active">Maintenance</button>
+                        </div>
+                    </div>
+
+                    <div class="status-control-item">
+                        <div class="control-info">
+                            <span class="control-name">Document Generator</span>
+                            <span class="current-status operational">Currently: Operational</span>
+                        </div>
+                        <div class="control-buttons">
+                            <button class="control-btn active">Operational</button>
+                            <button class="control-btn">Maintenance</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News Updates Management -->
+            <section class="admin-section">
+                <h2>News & Updates Management</h2>
+                <p>Manage system announcements and recent updates</p>
+                
+                <div class="news-management">
+                    <div class="news-form">
+                        <div class="form-group">
+                            <label>Update Title</label>
+                            <input type="text" placeholder="Enter update title..." class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Priority Level</label>
+                            <select class="form-select">
+                                <option>High Priority</option>
+                                <option>Medium Priority</option>
+                                <option>Info</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Update Content</label>
+                            <textarea placeholder="Enter update description..." class="form-textarea"></textarea>
+                        </div>
+                        
+                        <button class="publish-btn">Publish Update</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Management -->
+            <section class="admin-section">
+                <h2>User Management</h2>
+                <p>Manage agent accounts and access permissions</p>
+                
+                <div class="user-management">
+                    <div class="user-actions">
+                        <button class="action-btn">Add New Agent</button>
+                        <button class="action-btn">Modify Permissions</button>
+                        <button class="action-btn">Reset Passwords</button>
+                        <button class="action-btn">View Login Logs</button>
+                    </div>
+                    
+                    <div class="user-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">47</span>
+                            <span class="stat-label">Active Agents</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Pending Accounts</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Admin Users</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Database Management -->
+            <section class="admin-section">
+                <h2>Database Management</h2>
+                <p>Monitor and maintain database integrity</p>
+                
+                <div class="database-management">
+                    <div class="db-actions">
+                        <button class="action-btn">Run Backup</button>
+                        <button class="action-btn">Check Integrity</button>
+                        <button class="action-btn">Clear Cache</button>
+                        <button class="action-btn">View Usage Stats</button>
+                    </div>
+                    
+                    <div class="db-info">
+                        <div class="info-row">
+                            <span>Last Backup:</span>
+                            <span>Dec 20, 2024 - 03:00 AM</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Database Size:</span>
+                            <span>2.47 GB</span>
+                        </div>
+                        <div class="info-row">
+                            <span>Active Connections:</span>
+                            <span>23/100</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Settings -->
+            <section class="admin-section">
+                <h2>Security Settings</h2>
+                <p>Configure authentication and security protocols</p>
+                
+                <div class="security-settings">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <span class="setting-name">Two-Factor Authentication</span>
+                            <span class="setting-desc">Require 2FA for all agent logins</span>
+                        </div>
+                        <div class="setting-toggle">
+                            <button class="toggle-btn active">Enabled</button>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <span class="setting-name">Session Timeout</span>
+                            <span class="setting-desc">Auto-logout after inactivity</span>
+                        </div>
+                        <div class="setting-value">
+                            <select class="form-select">
+                                <option>30 minutes</option>
+                                <option>1 hour</option>
+                                <option>2 hours</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <span class="setting-name">Password Complexity</span>
+                            <span class="setting-desc">Enforce strong password requirements</span>
+                        </div>
+                        <div class="setting-toggle">
+                            <button class="toggle-btn active">Enabled</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- System Logs -->
+            <section class="admin-section">
+                <h2>System Logs</h2>
+                <p>Monitor system activity and error logs</p>
+                
+                <div class="logs-section">
+                    <div class="log-filters">
+                        <select class="form-select">
+                            <option>All Logs</option>
+                            <option>Error Logs</option>
+                            <option>Access Logs</option>
+                            <option>Security Logs</option>
+                        </select>
+                        <button class="action-btn">Export Logs</button>
+                    </div>
+                    
+                    <div class="log-entries">
+                        <div class="log-entry">
+                            <span class="log-time">2024-12-20 14:32:15</span>
+                            <span class="log-type info">INFO</span>
+                            <span class="log-message">Agent Smith logged in successfully</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">2024-12-20 14:28:03</span>
+                            <span class="log-type warning">WARN</span>
+                            <span class="log-message">Database connection timeout detected</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">2024-12-20 14:25:41</span>
+                            <span class="log-type error">ERROR</span>
+                            <span class="log-message">Failed login attempt from Agent Johnson</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer intranet-footer">
+        <div class="footer-content">
+            <div>
+                <h4>Internal Resources</h4>
+                <ul>
+                    <li><a href="#policies">Internal Policies</a></li>
+                    <li><a href="#training">Training Materials</a></li>
+                    <li><a href="#contacts">Agent Directory</a></li>
+                    <li><a href="#help">Technical Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Case Management</h4>
+                <ul>
+                    <li><a href="#active">Active Cases</a></li>
+                    <li><a href="#archived">Case Archives</a></li>
+                    <li><a href="#templates">Report Templates</a></li>
+                    <li><a href="#workflow">Workflow Guidelines</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Database Access</h4>
+                <ul>
+                    <li><a href="#criminal">Criminal Records</a></li>
+                    <li><a href="#evidence">Evidence Database</a></li>
+                    <li><a href="#forensics">Forensic Reports</a></li>
+                    <li><a href="#intelligence">Intelligence Data</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>System</h4>
+                <ul>
+                    <li><a href="#security">Security Settings</a></li>
+                    <li><a href="#backups">Data Backup</a></li>
+                    <li><a href="#logs">System Logs</a></li>
+                    <li><a href="#maintenance">Maintenance Schedule</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 U.S. Department of Justice Internal System | Classified - Authorized Personnel Only</p>
+        </div>
+    </footer>
+</body>
+</html>
