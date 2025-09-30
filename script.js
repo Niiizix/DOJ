@@ -1,6 +1,6 @@
 // Gestion de l'authentification
 const AUTH = {
-  WORKER_URL: 'https://ton-worker.workers.dev', // Remplace par ton URL Worker
+  WORKER_URL: 'https://discord-auth.charliemoimeme.workers.dev', // Remplace par ton URL Worker
   
   init() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -162,4 +162,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
 
