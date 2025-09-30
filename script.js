@@ -1,6 +1,6 @@
 // Gestion de l'authentification
 const AUTH = {
-  WORKER_URL: 'https://discord-auth.charliemoimeme.workers.dev', // Remplace par ton URL Worker
+  WORKER_URL: 'https://TON-WORKER-URL', // Mets ta vraie URL
   
   init() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -26,26 +26,40 @@ const AUTH = {
       const parts = token.split('.');
       const payload = JSON.parse(atob(parts[1]));
       
+      console.log('=== JWT DEBUG ===');
+      console.log('Token exp:', payload.exp);
+      console.log('Now:', Math.floor(Date.now() / 1000));
+      console.log('Expired?', payload.exp < Date.now() / 1000);
+      
       if (payload.exp && payload.exp < Date.now() / 1000) {
+        console.log('REDIRECT: token expiré');
         this.logout();
         return null;
       }
       
       return payload;
     } catch (e) {
+      console.log('ERROR décodage:', e);
       return null;
     }
   },
   
   checkAuth() {
     const token = this.getToken();
+    console.log('=== AUTH CHECK ===');
+    console.log('Token présent:', !!token);
+    
     if (!token) {
+      console.log('REDIRECT: pas de token');
       window.location.href = '/?error=not_authenticated';
       return false;
     }
     
     const payload = this.decodeJWT(token);
+    console.log('Payload décodé:', payload);
+    
     if (!payload) {
+      console.log('REDIRECT: payload null');
       window.location.href = '/?error=session_expired';
       return false;
     }
@@ -138,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Si on est sur la page admin, charger le timeout
   if (window.location.pathname.includes('intra-admin')) {
     console.log('On admin page');
-    //ADMIN.loadSessionTimeout();
+    ADMIN.loadSessionTimeout();
     
     const timeoutSelect = document.querySelector('#session-timeout-select');
     console.log('Select found:', timeoutSelect);
@@ -162,6 +176,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
-
-
-
