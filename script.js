@@ -1,6 +1,6 @@
 // Gestion de l'authentification
 const AUTH = {
-  WORKER_URL: 'https://discord-auth.charliemoimeme.workers.dev',
+  WORKER_URL: 'https://discord-auth.charliemoimeme.workers.dev', // Remplace par ton URL Worker
   
   init() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -107,13 +107,15 @@ const ADMIN = {
       const data = await response.json();
       
       if (data.success) {
-        alert('Session timeout updated successfully!');
+        console.log('Session timeout updated:', minutes, 'minutes');
+        return true;
       } else {
-        alert('Failed to update session timeout');
+        console.error('Failed to update session timeout');
+        return false;
       }
     } catch (error) {
       console.error('Failed to update session timeout:', error);
-      alert('Error updating session timeout');
+      return false;
     }
   }
 };
@@ -135,12 +137,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('intra-admin.html')) {
     ADMIN.loadSessionTimeout();
     
-    // Gérer le changement de timeout
+    // Gérer le changement de timeout - SAUVEGARDER IMMÉDIATEMENT
     const timeoutSelect = document.querySelector('#session-timeout-select');
     if (timeoutSelect) {
-      timeoutSelect.addEventListener('change', (e) => {
+      timeoutSelect.addEventListener('change', async (e) => {
         const minutes = parseInt(e.target.value);
-        ADMIN.updateSessionTimeout(minutes);
+        const success = await ADMIN.updateSessionTimeout(minutes);
+        
+        if (success) {
+          // Optionnel : afficher un message de confirmation
+          const settingItem = timeoutSelect.closest('.setting-item');
+          if (settingItem) {
+            const feedback = document.createElement('span');
+            feedback.textContent = '✓ Saved';
+            feedback.style.color = '#34495e';
+            feedback.style.fontSize = '12px';
+            feedback.style.marginLeft = '10px';
+            settingItem.appendChild(feedback);
+            
+            setTimeout(() => feedback.remove(), 2000);
+          }
+        }
       });
     }
   }
