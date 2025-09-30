@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Si on est sur la page admin, charger le timeout
   if (window.location.pathname.includes('intra-admin')) {
     console.log('On admin page');
-    ADMIN.loadSessionTimeout();
+    //ADMIN.loadSessionTimeout();
     
     const timeoutSelect = document.querySelector('#session-timeout-select');
     console.log('Select found:', timeoutSelect);
@@ -162,5 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
 
 
