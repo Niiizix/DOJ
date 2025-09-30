@@ -1,7 +1,6 @@
-console.log('Script.js loaded');
 // Gestion de l'authentification
 const AUTH = {
-  WORKER_URL: 'https://discord-auth.charliemoimeme.workers.dev', // Remplace par ton URL Worker
+  WORKER_URL: 'https://ton-worker.workers.dev', // Remplace par ton URL Worker
   
   init() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -123,6 +122,8 @@ const ADMIN = {
 
 // Initialisation au chargement
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Script.js loaded');
+  
   AUTH.init();
   
   // Bouton logout
@@ -135,33 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // Si on est sur la page admin, charger le timeout
-  if (window.location.pathname.includes('intra-admin.html')) {
-    ADMIN.loadSessionTimeout();
-    
-    // Gérer le changement de timeout - SAUVEGARDER IMMÉDIATEMENT
-    const timeoutSelect = document.querySelector('#session-timeout-select');
-    if (timeoutSelect) {
-      timeoutSelect.addEventListener('change', async (e) => {
-        const minutes = parseInt(e.target.value);
-        const success = await ADMIN.updateSessionTimeout(minutes);
-        
-        if (success) {
-          // Optionnel : afficher un message de confirmation
-          const settingItem = timeoutSelect.closest('.setting-item');
-          if (settingItem) {
-            const feedback = document.createElement('span');
-            feedback.textContent = '✓ Saved';
-            feedback.style.color = '#34495e';
-            feedback.style.fontSize = '12px';
-            feedback.style.marginLeft = '10px';
-            settingItem.appendChild(feedback);
-            
-            setTimeout(() => feedback.remove(), 2000);
-          }
-        }
-      });
-    }
-  }
   if (window.location.pathname.includes('intra-admin.html')) {
     console.log('On admin page');
     ADMIN.loadSessionTimeout();
@@ -178,26 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const success = await ADMIN.updateSessionTimeout(minutes);
         console.log('Save result:', success);
+        
+        if (success) {
+          alert('Timeout saved: ' + minutes + ' minutes');
+        }
       });
     } else {
-      console.log('Select NOT found!');
+      console.log('Select NOT found - check the ID in HTML');
     }
   }
 });
-
-timeoutSelect.addEventListener('change', async (e) => {
-  const minutes = parseInt(e.target.value);
-  console.log('Trying to save timeout:', minutes, 'minutes');
-  
-  const success = await ADMIN.updateSessionTimeout(minutes);
-  console.log('Save result:', success);
-  
-  if (success) {
-    alert('Timeout saved: ' + minutes + ' minutes');
-  } else {
-    alert('Failed to save timeout');
-  }
-});
-
-
-
