@@ -162,6 +162,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+  if (window.location.pathname.includes('intra-admin.html')) {
+    console.log('On admin page');
+    ADMIN.loadSessionTimeout();
+    
+    const timeoutSelect = document.querySelector('#session-timeout-select');
+    console.log('Select found:', timeoutSelect);
+    
+    if (timeoutSelect) {
+      console.log('Adding event listener');
+      timeoutSelect.addEventListener('change', async (e) => {
+        console.log('Change event fired!');
+        const minutes = parseInt(e.target.value);
+        console.log('Trying to save timeout:', minutes, 'minutes');
+        
+        const success = await ADMIN.updateSessionTimeout(minutes);
+        console.log('Save result:', success);
+      });
+    } else {
+      console.log('Select NOT found!');
+    }
+  }
 });
 
 timeoutSelect.addEventListener('change', async (e) => {
@@ -177,5 +198,6 @@ timeoutSelect.addEventListener('change', async (e) => {
     alert('Failed to save timeout');
   }
 });
+
 
 
