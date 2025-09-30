@@ -1,3 +1,4 @@
+console.log('Script.js loaded');
 // Gestion de l'authentification
 const AUTH = {
   WORKER_URL: 'https://discord-auth.charliemoimeme.workers.dev', // Remplace par ton URL Worker
@@ -176,4 +177,5 @@ timeoutSelect.addEventListener('change', async (e) => {
     alert('Failed to save timeout');
   }
 });
+
 
