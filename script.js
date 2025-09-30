@@ -1,6 +1,6 @@
 // Gestion de l'authentification
 const AUTH = {
-  WORKER_URL: 'https://TON-WORKER-URL', // Mets ta vraie URL
+  WORKER_URL: 'https://discord-auth.charliemoimeme.workers.dev', // Mets ta vraie URL
   
   init() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -176,3 +176,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
