@@ -162,3 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+timeoutSelect.addEventListener('change', async (e) => {
+  const minutes = parseInt(e.target.value);
+  console.log('Trying to save timeout:', minutes, 'minutes');
+  
+  const success = await ADMIN.updateSessionTimeout(minutes);
+  console.log('Save result:', success);
+  
+  if (success) {
+    alert('Timeout saved: ' + minutes + ' minutes');
+  } else {
+    alert('Failed to save timeout');
+  }
+});
+
