@@ -211,10 +211,14 @@
                             <span class="setting-desc">Auto-logout after inactivity</span>
                         </div>
                         <div class="setting-value">
-                            <select class="form-select">
-                                <option>30 minutes</option>
-                                <option>1 hour</option>
-                                <option>2 hours</option>
+                            <select class="form-select" id="session-timeout-select">
+                                <option value="5">5 minutes</option>
+                                <option value="15">15 minutes</option>
+                                <option value="30" selected>30 minutes</option>
+                                <option value="60">1 hour</option>
+                                <option value="120">2 hours</option>
+                                <option value="360">6 hours</option>
+                                <option value="1440">24 hours</option>
                             </select>
                         </div>
                     </div>
@@ -316,3 +320,4 @@
 </body>
 
 </html>
+
