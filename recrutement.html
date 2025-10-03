@@ -15,8 +15,8 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <img src="imgs/logo.svg" alt="DOJ Logo" class="header-logo">
-            <a href="#" class="intranet-btn">Accès Intranet</a>
+            <img class src="imgs/logo.svg" alt="DOJ Logo" class="header-logo">
+            <a href="https://discord-auth.charliemoimeme.workers.dev/auth/discord" class="intranet-btn">Accès Intranet</a>
         </div>
     </header>
 
@@ -24,11 +24,11 @@
     <nav class="nav">
         <div class="nav-content">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About DOJ</a></li>
-                <li><a href="about-2.html">Agencies</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="recrutement.html" class="active">Careers</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">A Propos</a></li>
+                <li><a href="about-2.html">Spécialisations</a></li>
+                <li><a href="news.html">Presse</a></li>
+                <li><a href="recrutement.html" class="active">Recrutements</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -38,49 +38,46 @@
     <main class="careers-main">
         <!-- Header de page -->
         <div class="page-header">
-            <h1>Join the Department of Justice</h1>
-            <p>The Department of Justice is actively recruiting dedicated professionals to serve in various capacities across our agencies. We are committed to building a diverse workforce of highly qualified individuals who share our mission of upholding justice and protecting the American people.</p>
-            <p>Whether you're interested in law enforcement, legal services, cybersecurity, administration, or specialized investigations, the DOJ offers challenging and rewarding career opportunities that make a real difference in communities nationwide.</p>
+            <h1>Rejoignez le Department of Justice</h1>
+            <p>Le Department Of Justice recrute activement des professionnels dévoués pour servir à divers titres dans nos organismes. Nous sommes engagés à constituer une main-d’œuvre diversifiée de personnes hautement qualifiées qui partagent notre mission de faire respecter la justice et de protéger le peuple américain.</p>
+            <p>Que vous soyez intéressé par l’application de la loi, les services juridiques, la protection rapprochée, l’administration ou les enquêtes spécialisées, le DOJ offre des opportunités de carrière stimulantes et enrichissantes qui font une réelle différence dans les communautés à l’échelle nationale.</p>
         </div>
 
         <div class="careers-content">
             <!-- Section Critères -->
             <section class="criteria-section">
-                <h2>Eligibility Requirements</h2>
+                <h2>Prérequis</h2>
                 <div class="criteria-content">
-                    <p>To be considered for employment with the Department of Justice, candidates must meet the following minimum requirements:</p>
+                    <p>Pour être éligible aux recrutements aux Department Of Justice, les candidats doivent satisfaire aux exigences minimales suivantes :</p>
                     <ul class="criteria-list">
-                        <li>U.S. citizenship is required for all positions</li>
-                        <li>Must be at least 21 years of age (23 for certain law enforcement positions)</li>
-                        <li>Bachelor's degree from an accredited institution (minimum requirement for most positions)</li>
-                        <li>Clean criminal background with no felony convictions</li>
-                        <li>Ability to obtain and maintain appropriate security clearance</li>
-                        <li>Physical fitness standards must be met for law enforcement roles</li>
-                        <li>Successful completion of polygraph examination where required</li>
-                        <li>Drug screening and ongoing random testing compliance</li>
-                        <li>Valid driver's license with acceptable driving record</li>
-                        <li>Willingness to relocate based on agency needs</li>
-                        <li>Strong written and verbal communication skills</li>
-                        <li>Demonstrated integrity and ethical decision-making</li>
+                        <li>Nationalité Américaine</li>
+                        <li>Avoir 21 ans révolus</li>
+                        <li>Diplôme de licence d’une institution accréditée (exigence minimale pour la plupart des postes)</li>
+                        <li>Un casier judiciaire vierge sans condamnations pour crime</li>
+                        <li>Capacité d’obtenir et de conserver une habilitation de sécurité appropriée</li>
+                        <li>Les normes de condition physique doivent être respectées pour les rôles d’application de la loi</li>
+                        <li>Dépistage de drogues et conformité aux tests aléatoires continus</li>
+                        <li>Permis de conduire valide avec un dossier de conduite acceptable</li>
+                        <li>Volonté de déménager en fonction des besoins de l’agence</li>
+                        <li>Fortes compétences en communication écrite et verbale</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Zone Contact Recrutement -->
             <section class="contact-recruitment">
-                <h2>Apply Now</h2>
+                <h2>Commencez Maintenant</h2>
                 <div class="contact-content">
-                    <p>Ready to begin your career with the Department of Justice? Our recruitment team is here to guide you through the application process and answer any questions you may have about available positions and requirements.</p>
-                    <p>Complete our online application form to get started. Our human resources specialists will review your qualifications and contact you regarding next steps in the selection process.</p>
+                    <p>Prêt à commencer votre carrière au ministère de la Justice ? Notre équipe de recrutement est là pour vous guider dans le processus de candidature et répondre à toutes vos questions sur les postes disponibles et les exigences.</p>
+                    <p>Remplissez notre formulaire de candidature en ligne pour commencer. Un responsable examinera vos qualifications et vous contactera concernant les prochaines étapes du processus de sélection.</p>
                     
                     <div class="application-button-container">
                         <button class="application-btn" onclick="openRecruitmentModal()">Remplir le formulaire</button>
                     </div>
                     
                     <div class="contact-info">
-                        <p><strong>Questions about the recruitment process?</strong></p>
-                        <p>Contact our HR department at: <strong>recruitment@doj.gov</strong></p>
-                        <p>Phone: <strong>(202) 514-3396</strong></p>
+                        <p><strong>Des questions à propos du processus ?</strong></p>
+                        <p>Contactez un responsable sur l'intranet secondaire</p>
                     </div>
                 </div>
             </section>
@@ -91,27 +88,27 @@
     <div id="recruitment-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeRecruitmentModal()">&times;</span>
-            <h2>DOJ Employment Application</h2>
+            <h2>Fiche d'informations</h2>
             <form id="recruitment-form" onsubmit="submitRecruitmentForm(event)">
                 <div class="form-group">
-                    <label for="recruitment-name">Full Name *</label>
+                    <label for="recruitment-name">Nom Complet *</label>
                     <input type="text" id="recruitment-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="recruitment-dob">Date of Birth (DD/MM/YYYY) *</label>
-                    <input type="text" id="recruitment-dob" placeholder="15/03/1995" pattern="\d{2}/\d{2}/\d{4}" required>
+                    <label for="recruitment-dob">Date de naissance</label>
+                    <input type="text" id="recruitment-dob" placeholder="DD/MM/YYYY" pattern="\d{2}/\d{2}/\d{4}" required>
                 </div>
                 <div class="form-group">
-                    <label for="recruitment-phone">Phone Number *</label>
+                    <label for="recruitment-phone">Numéro de téléphone</label>
                     <input type="tel" id="recruitment-phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="recruitment-email">Discord Email *</label>
+                    <label for="recruitment-email">Email</label>
                     <input type="email" id="recruitment-email" required>
                 </div>
                 <div class="form-actions">
-                    <button type="button" class="btn-cancel" onclick="closeRecruitmentModal()">Cancel</button>
-                    <button type="submit" class="btn-submit">Submit Application</button>
+                    <button type="button" class="btn-cancel" onclick="closeRecruitmentModal()">Annuler</button>
+                    <button type="submit" class="btn-submit">Envoyer la fiche</button>
                 </div>
             </form>
             <div id="recruitment-result" class="form-result" style="display: none;"></div>
@@ -166,3 +163,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
