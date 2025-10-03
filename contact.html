@@ -15,8 +15,8 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <img src="imgs/logo.svg" alt="DOJ Logo" class="header-logo">
-            <a href="#" class="intranet-btn">Accès Intranet</a>
+            <img class src="imgs/logo.svg" alt="DOJ Logo" class="header-logo">
+            <a href="https://discord-auth.charliemoimeme.workers.dev/auth/discord" class="intranet-btn">Accès Intranet</a>
         </div>
     </header>
 
@@ -24,12 +24,12 @@
     <nav class="nav">
         <div class="nav-content">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About DOJ</a></li>
-                <li><a href="about-2.html">Agencies</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="recrutement.html">Careers</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="about.html">A Propos</a></li>
+                <li><a href="about-2.html">Spécialisations</a></li>
+                <li><a href="news.html">Presse</a></li>
+                <li><a href="recrutement.html">Recrutements</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -38,9 +38,9 @@
     <main class="contact-main">
         <!-- Header de page -->
         <div class="page-header">
-            <h1>Contact the Department of Justice</h1>
-            <p>The Department of Justice maintains multiple channels of communication to serve the needs of law enforcement agencies, legal professionals, and the public. Please select the appropriate contact method based on the nature of your inquiry.</p>
-            <p>Our dedicated teams are available to assist with legal matters, administrative requests, and coordination with other agencies. Response times may vary depending on the urgency and complexity of your request.</p>
+            <h1>Contacter le Department of Justice</h1>
+            <p>Le Department Of Justice maintient de multiples voies de communication pour répondre aux besoins des organismes d’application de la loi, des professionnels du droit et du public. Veuillez sélectionner la méthode de contact appropriée en fonction de la nature de votre demande.</p>
+            <p>Nos équipes dédiées sont disponibles pour aider avec les questions juridiques, les demandes administratives et la coordination avec d’autres agences. Les délais de réponse peuvent varier en fonction de l’urgence et de la complexité de votre demande.</p>
         </div>
 
         <!-- Cartes de contact -->
@@ -52,19 +52,19 @@
                     <div class="card-icon">⚖️</div>
                 </div>
                 <div class="card-content">
-                    <p>Contact a federal prosecutor for matters related to:</p>
+                    <p>Contacter un procureur pour :</p>
                     <ul class="contact-list">
-                        <li>Reporting criminal activities requiring federal investigation</li>
-                        <li>Providing information about fugitives or suspects</li>
-                        <li>Requesting warrants for SASP (Special Agent Support Program)</li>
-                        <li>Coordinating multi-jurisdictional cases</li>
-                        <li>Legal consultation on federal statutes</li>
+                        <li>Signaler des activités criminelles nécessitant une enquête fédérale</li>
+                        <li>Fournir des informations sur des fugitifs ou des suspects</li>
+                        <li>Poser une question juridique sur les lois fédérales</li>
+                        <li>SASP : Demander un mandat</li>
+                        <li>SASP : Lancer une affaire multi-juridictionnelles</li>
                     </ul>
-                    <p class="availability"><strong>Availability:</strong> Monday-Friday, 8:00 AM - 6:00 PM EST</p>
-                    <p class="response-time"><strong>Expected Response:</strong> 24-48 hours for urgent matters</p>
+                    <p class="availability"><strong>Disponibilités :</strong> Lundi/Vendredi, 8:00 - 18:00</p>
+                    <p class="response-time"><strong>Temps moyen de réponse :</strong> 24-48 heures pour les matières urgentes</p>
                 </div>
                 <div class="card-footer">
-                    <button class="contact-btn" onclick="openAttorneyModal()">Contact Prosecutor</button>
+                    <button class="contact-btn" onclick="openAttorneyModal()">Contacter un Procureur</button>
                 </div>
             </div>
 
@@ -75,38 +75,35 @@
                     <div class="card-icon">🏛️</div>
                 </div>
                 <div class="card-content">
-                    <p>Contact DOJ leadership for:</p>
+                    <p>Contacter la direction du DOJ pour :</p>
                     <ul class="contact-list">
-                        <li>Scheduling meetings with department executives</li>
-                        <li>High-priority inter-agency coordination requests</li>
-                        <li>Policy clarification from senior leadership</li>
-                        <li>Strategic partnership discussions</li>
-                        <li>Official correspondence requiring executive attention</li>
+                        <li>Planifier des réunions avec les cadres du département</li>
+                        <li>SASP : Demandes de coordination urgentes pour une taskforce interservice</li>
                     </ul>
-                    <p class="availability"><strong>Availability:</strong> By appointment only</p>
-                    <p class="response-time"><strong>Expected Response:</strong> 3-5 business days for scheduling</p>
+                    <p class="availability"><strong>Disponibilités :</strong> Uniquement sur rendez-vous</p>
+                    <p class="response-time"><strong>Temps moyen de réponse :</strong> 3-5 jours pour déterminer un rendez-vous</p>
                 </div>
                 <div class="card-footer">
-                    <button class="contact-btn" onclick="openDirectionModal()">Request Meeting</button>
+                    <button class="contact-btn" onclick="openDirectionModal()">Contacter la direction</button>
                 </div>
             </div>
         </div>
 
         <!-- Section d'informations générales -->
         <div class="general-info">
-            <h3>General Information</h3>
+            <h3>Informations Générales</h3>
             <div class="info-grid">
                 <div class="info-item">
-                    <strong>Emergency Contact:</strong>
-                    <p>For immediate law enforcement assistance, dial 911</p>
+                    <strong>Contact d'urgence:</strong>
+                    <p>Pour une assistance policère imédiate, contactez le SASP</p>
                 </div>
                 <div class="info-item">
-                    <strong>Main Switchboard:</strong>
-                    <p>(202) 514-2000</p>
+                    <strong>Contact Helpdesk :</strong>
+                    <p>Via l'application sur le téléphone</p>
                 </div>
                 <div class="info-item">
-                    <strong>Business Hours:</strong>
-                    <p>Monday - Friday, 8:00 AM - 5:00 PM EST</p>
+                    <strong>Disponibilités :</strong>
+                    <p>Lundi - Vendredi, 8:00 - 17:00</p>
                 </div>
             </div>
         </div>
@@ -116,27 +113,27 @@
     <div id="attorney-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeAttorneyModal()">&times;</span>
-            <h2>Contact a Federal Prosecutor</h2>
+            <h2>Contacter un procureur</h2>
             <form id="attorney-form" onsubmit="submitAttorneyForm(event)">
                 <div class="form-group">
-                    <label for="attorney-name">Full Name *</label>
+                    <label for="attorney-name">Nom Complet</label>
                     <input type="text" id="attorney-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="attorney-phone">Phone Number *</label>
+                    <label for="attorney-phone">Numéro de téléphone</label>
                     <input type="tel" id="attorney-phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="attorney-email">Discord Email *</label>
+                    <label for="attorney-email">Email</label>
                     <input type="email" id="attorney-email" required>
                 </div>
                 <div class="form-group">
-                    <label for="attorney-reason">Reason for Contact *</label>
+                    <label for="attorney-reason">Raison de la prise de contact</label>
                     <textarea id="attorney-reason" rows="5" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="button" class="btn-cancel" onclick="closeAttorneyModal()">Cancel</button>
-                    <button type="submit" class="btn-submit">Submit Request</button>
+                    <button type="button" class="btn-cancel" onclick="closeAttorneyModal()">Annuler</button>
+                    <button type="submit" class="btn-submit">Prendre contact</button>
                 </div>
             </form>
             <div id="attorney-result" class="form-result" style="display: none;"></div>
@@ -147,27 +144,27 @@
     <div id="direction-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeDirectionModal()">&times;</span>
-            <h2>Request Meeting with Leadership</h2>
+            <h2>Contacter la direction</h2>
             <form id="direction-form" onsubmit="submitDirectionForm(event)">
                 <div class="form-group">
-                    <label for="direction-name">Full Name *</label>
+                    <label for="direction-name">Nom Complet</label>
                     <input type="text" id="direction-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="direction-phone">Phone Number *</label>
+                    <label for="direction-phone">Numéro de téléphone</label>
                     <input type="tel" id="direction-phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="direction-email">Discord Email *</label>
+                    <label for="direction-email">Email</label>
                     <input type="email" id="direction-email" required>
                 </div>
                 <div class="form-group">
-                    <label for="direction-reason">Reason for Meeting *</label>
+                    <label for="direction-reason">Raison de la prise de contact</label>
                     <textarea id="direction-reason" rows="5" required></textarea>
                 </div>
                 <div class="form-actions">
-                    <button type="button" class="btn-cancel" onclick="closeDirectionModal()">Cancel</button>
-                    <button type="submit" class="btn-submit">Submit Request</button>
+                    <button type="button" class="btn-cancel" onclick="closeDirectionModal()">Annuler</button>
+                    <button type="submit" class="btn-submit">Prendre Contact</button>
                 </div>
             </form>
             <div id="direction-result" class="form-result" style="display: none;"></div>
@@ -222,3 +219,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
