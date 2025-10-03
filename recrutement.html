@@ -74,7 +74,7 @@
                     <p>Complete our online application form to get started. Our human resources specialists will review your qualifications and contact you regarding next steps in the selection process.</p>
                     
                     <div class="application-button-container">
-                        <button class="application-btn">Remplir le formulaire</button>
+                        <button class="application-btn" onclick="openRecruitmentModal()">Remplir le formulaire</button>
                     </div>
                     
                     <div class="contact-info">
@@ -86,6 +86,37 @@
             </section>
         </div>
     </main>
+
+    <!-- Modal Recrutement -->
+    <div id="recruitment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRecruitmentModal()">&times;</span>
+            <h2>DOJ Employment Application</h2>
+            <form id="recruitment-form" onsubmit="submitRecruitmentForm(event)">
+                <div class="form-group">
+                    <label for="recruitment-name">Full Name *</label>
+                    <input type="text" id="recruitment-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="recruitment-dob">Date of Birth (DD/MM/YYYY) *</label>
+                    <input type="text" id="recruitment-dob" placeholder="15/03/1995" pattern="\d{2}/\d{2}/\d{4}" required>
+                </div>
+                <div class="form-group">
+                    <label for="recruitment-phone">Phone Number *</label>
+                    <input type="tel" id="recruitment-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="recruitment-email">Discord Email *</label>
+                    <input type="email" id="recruitment-email" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeRecruitmentModal()">Cancel</button>
+                    <button type="submit" class="btn-submit">Submit Application</button>
+                </div>
+            </form>
+            <div id="recruitment-result" class="form-result" style="display: none;"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -131,6 +162,7 @@
             <p>&copy; 2024 U.S. Department of Justice | This is a GTARP roleplay website</p>
         </div>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
