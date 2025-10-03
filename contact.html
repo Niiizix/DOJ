@@ -64,7 +64,7 @@
                     <p class="response-time"><strong>Expected Response:</strong> 24-48 hours for urgent matters</p>
                 </div>
                 <div class="card-footer">
-                    <button class="contact-btn">Contact Prosecutor</button>
+                    <button class="contact-btn" onclick="openAttorneyModal()">Contact Prosecutor</button>
                 </div>
             </div>
 
@@ -87,7 +87,7 @@
                     <p class="response-time"><strong>Expected Response:</strong> 3-5 business days for scheduling</p>
                 </div>
                 <div class="card-footer">
-                    <button class="contact-btn">Request Meeting</button>
+                    <button class="contact-btn" onclick="openDirectionModal()">Request Meeting</button>
                 </div>
             </div>
         </div>
@@ -111,6 +111,68 @@
             </div>
         </div>
     </main>
+
+    <!-- Modal Contact Procureur -->
+    <div id="attorney-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAttorneyModal()">&times;</span>
+            <h2>Contact a Federal Prosecutor</h2>
+            <form id="attorney-form" onsubmit="submitAttorneyForm(event)">
+                <div class="form-group">
+                    <label for="attorney-name">Full Name *</label>
+                    <input type="text" id="attorney-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="attorney-phone">Phone Number *</label>
+                    <input type="tel" id="attorney-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="attorney-email">Discord Email *</label>
+                    <input type="email" id="attorney-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="attorney-reason">Reason for Contact *</label>
+                    <textarea id="attorney-reason" rows="5" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeAttorneyModal()">Cancel</button>
+                    <button type="submit" class="btn-submit">Submit Request</button>
+                </div>
+            </form>
+            <div id="attorney-result" class="form-result" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Modal Contact Direction -->
+    <div id="direction-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDirectionModal()">&times;</span>
+            <h2>Request Meeting with Leadership</h2>
+            <form id="direction-form" onsubmit="submitDirectionForm(event)">
+                <div class="form-group">
+                    <label for="direction-name">Full Name *</label>
+                    <input type="text" id="direction-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="direction-phone">Phone Number *</label>
+                    <input type="tel" id="direction-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="direction-email">Discord Email *</label>
+                    <input type="email" id="direction-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="direction-reason">Reason for Meeting *</label>
+                    <textarea id="direction-reason" rows="5" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="closeDirectionModal()">Cancel</button>
+                    <button type="submit" class="btn-submit">Submit Request</button>
+                </div>
+            </form>
+            <div id="direction-result" class="form-result" style="display: none;"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -156,6 +218,7 @@
             <p>&copy; 2024 U.S. Department of Justice | This is a GTARP roleplay website</p>
         </div>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
